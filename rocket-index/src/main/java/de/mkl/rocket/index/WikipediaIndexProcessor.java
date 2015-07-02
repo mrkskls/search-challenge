@@ -67,7 +67,12 @@ public class WikipediaIndexProcessor implements IndexProcessor {
                 writer.close();
             }
         }
+        printResult(indexedDocuments);
         return indexedDocuments;
+    }
+
+    private void printResult(int indexedDocuments){
+        System.out.println("Indexing finished - " + indexedDocuments + " documents processed.");
     }
 
     private void parseWikipediaFile() throws IOException, SAXException {
