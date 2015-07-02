@@ -32,7 +32,7 @@ public class WikipediaSearchProcessorTest {
     @Test
     public void testWordSearch(){
 
-        String word = "university";
+        String word = "purpose";
         try {
             TopGroups topDocs = searchProcessor.executeWordSearch(word);
             Assert.assertEquals(1, topDocs.totalHitCount);
@@ -44,7 +44,7 @@ public class WikipediaSearchProcessorTest {
     @Test
     public void testContributorSearch(){
 
-        String contributor = "Archaefructus";
+        String contributor = "mkl";
         try {
             TopDocs topDocs = searchProcessor.executeContributorSearch(contributor);
             Assert.assertTrue(topDocs.totalHits > 0);

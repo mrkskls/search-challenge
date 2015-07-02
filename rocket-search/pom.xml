@@ -53,7 +53,7 @@
     </dependencies>
 
     <build>
-        <finalName>wikipedia-search</finalName>
+        <finalName>search</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

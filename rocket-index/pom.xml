@@ -47,7 +47,7 @@
     </dependencies>
 
     <build>
-    <finalName>wikipedia-index</finalName>
+    <finalName>index</finalName>
     <plugins>
     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
