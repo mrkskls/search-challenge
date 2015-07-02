@@ -79,7 +79,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <mainClass>de.mkl.rocket.search.SearchCLI</mainClass>
-                            <classpathPrefix>lib/</classpathPrefix>
+                            <classpathPrefix>../lib/</classpathPrefix>
                         </manifest>
                     </archive>
                 </configuration>
