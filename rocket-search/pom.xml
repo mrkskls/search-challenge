@@ -47,7 +47,6 @@
         <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-grouping</artifactId>
-            <version>4.3.1</version>
         </dependency>
 
     </dependencies>
@@ -80,7 +79,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <mainClass>de.mkl.rocket.search.SearchCLI</mainClass>
-                            <classpathPrefix>../lib/</classpathPrefix>
+                            <classpathPrefix>lib/</classpathPrefix>
                         </manifest>
                     </archive>
                 </configuration>

@@ -72,15 +72,15 @@ public class WikipediaSearchProcessor implements SearchProcessor{
 
     private Query getWordQuery(String word) throws ParseException {
 
-        Analyzer analyzer = new WikipediaAnalyzer(Version.LUCENE_43);
-        QueryParser parser = new QueryParser(Version.LUCENE_43, IndexedWikipediaField.TEXT.getFieldName(), analyzer);
+        Analyzer analyzer = new WikipediaAnalyzer();
+        QueryParser parser = new QueryParser(IndexedWikipediaField.TEXT.getFieldName(), analyzer);
         return parser.parse(word);
     }
 
     private Query getContributorQuery(String contributor) throws ParseException {
 
-        Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_43);
-        QueryParser parser = new QueryParser(Version.LUCENE_43, IndexedWikipediaField.CONTRIBUTOR.getFieldName(), analyzer);
+        Analyzer analyzer = new StandardAnalyzer();
+        QueryParser parser = new QueryParser(IndexedWikipediaField.CONTRIBUTOR.getFieldName(), analyzer);
         return parser.parse(contributor);
     }
 

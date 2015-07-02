@@ -114,11 +114,11 @@ public class WikipediaIndexProcessor implements IndexProcessor {
     private IndexWriterConfig getIndexWriterConfig(){
 
         Map<String,Analyzer> analyzerPerField = new HashMap<>();
-        analyzerPerField.put(IndexedWikipediaField.CONTRIBUTOR.getFieldName(), new StandardAnalyzer(Version.LUCENE_43));
+        analyzerPerField.put(IndexedWikipediaField.CONTRIBUTOR.getFieldName(), new StandardAnalyzer());
         PerFieldAnalyzerWrapper analyzer =
-                new PerFieldAnalyzerWrapper(new WikipediaAnalyzer(Version.LUCENE_43), analyzerPerField);
+                new PerFieldAnalyzerWrapper(new WikipediaAnalyzer(), analyzerPerField);
 
-        IndexWriterConfig iwc = new IndexWriterConfig(Version.LUCENE_43, analyzer);
+        IndexWriterConfig iwc = new IndexWriterConfig(Version.LUCENE_4_10_4, analyzer);
         iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
         return iwc;
     }

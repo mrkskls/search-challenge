@@ -21,16 +21,16 @@ import java.io.Reader;
  */
 public class WikipediaAnalyzer extends StopwordAnalyzerBase {
 
-    public WikipediaAnalyzer(Version version) {
-        super(version, StopAnalyzer.ENGLISH_STOP_WORDS_SET);
+    public WikipediaAnalyzer() {
+        super(StopAnalyzer.ENGLISH_STOP_WORDS_SET);
     }
 
     @Override
     protected Analyzer.TokenStreamComponents createComponents(String fieldName, Reader reader) {
         final Tokenizer src = new WikipediaTokenizer(reader);
-        StandardFilter standardFilter = new StandardFilter(this.matchVersion, src);
-        LowerCaseFilter lowerCaseFilter = new LowerCaseFilter(this.matchVersion, standardFilter);
-        final StopFilter stopFilter = new StopFilter(this.matchVersion, lowerCaseFilter, this.stopwords);
+        StandardFilter standardFilter = new StandardFilter(src);
+        LowerCaseFilter lowerCaseFilter = new LowerCaseFilter(standardFilter);
+        final StopFilter stopFilter = new StopFilter(lowerCaseFilter, this.stopwords);
         PorterStemFilter porterStemFilter = new PorterStemFilter(stopFilter);
         return new TokenStreamComponents(src, porterStemFilter) {
             protected void setReader(Reader reader) throws IOException {

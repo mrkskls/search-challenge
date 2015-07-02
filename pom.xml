@@ -14,7 +14,7 @@
         <module>rocket-search</module>
     </modules>
     <properties>
-        <lucene.version>4.3.1</lucene.version>
+        <lucene.version>4.10.4</lucene.version>
     </properties>
 
     <dependencyManagement>
@@ -67,6 +67,12 @@
             <dependency>
                 <groupId>org.apache.lucene</groupId>
                 <artifactId>lucene-queryparser</artifactId>
+                <version>${lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-grouping</artifactId>
                 <version>${lucene.version}</version>
             </dependency>
 
