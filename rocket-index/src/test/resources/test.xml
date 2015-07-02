@@ -1,0 +1,13 @@
+<page>
+  <title>This is a test page</title>
+  <ns>0</ns>
+  <id>1</id>
+  <revision>
+    <id>1</id>
+    <parentid>2</parentid>
+    <contributor>
+      <username>mkl</username>
+    </contributor>
+    <text>This is a text for testing purposes</text>  
+    </revision>
+</page>
